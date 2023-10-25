@@ -65,3 +65,18 @@ div h2{
     background: #8A7488;
     color: white;
 }
+@keyframes ajo{
+    from{
+        opacity: 1;
+
+    }
+    to{
+        opacity: 0;
+    }
+}
+.ajo {
+    animation-name: ajo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
