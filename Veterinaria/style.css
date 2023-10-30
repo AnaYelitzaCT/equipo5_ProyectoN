@@ -15,7 +15,7 @@ nav{
     align-items: center;
 }
 
-nav a{
+.nav-link{
     text-transform: uppercase;
     color: #874F81;
     font-weight: bold;
@@ -23,12 +23,10 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover {
+
+nav li:hover{
     background-color: pink;
     text-decoration: underline;
-}
-
-nav li{
     display: inline;
     margin: 0 0 0 15px;
     color: #874F81;
@@ -38,9 +36,27 @@ nav li{
 
 
 .logo_mascotitas{
-    width: 10%;
-    height: 10%;
+    width: 15%;
+    height: 15%;
     
+}
+
+.fcb{
+    width: 30%;
+    height: 30%;
+
+}
+
+.x{
+    width: 30%;
+    height: 30%;
+
+}
+
+.instagram{
+    width: 30%;
+    height:30%;
+
 }
 
 .imgPrincipal{
