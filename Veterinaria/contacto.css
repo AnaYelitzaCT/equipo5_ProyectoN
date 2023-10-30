@@ -1,0 +1,18 @@
+body{
+    background-color: #E1E1E1;
+}
+
+.navbar{
+    padding-left: 15%;
+}
+.navbar-brand, .nav-link{
+    color: #874F81;
+    font-size: 30px;
+}
+.icons{
+    padding-left: 100px;
+    margin-top: 10px;
+}
+.icons2{
+    padding-left:40px;
+}
