@@ -9,18 +9,6 @@ body{
     
 }
 
-
-body{
-    background-color: #E1E1E1;
-}
-.caja{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 5px;
-    
-}
-
 nav{
     display: inline; 
     align-items: center;
@@ -47,89 +35,45 @@ nav li:hover{
 
 
 .logo_mascotitas{
-    width: 25%;
-    height: 25%;
+    width: 15%;
+    height: 15%;
     
 }
 
 .fcb{
-    width: 80%;
-    height: 50%;
-    
+    width: 30%;
+    height: 30%;
 
 }
 
 .x{
-    width: 80%;
+    width: 30%;
     height: 30%;
 
 }
 
 .instagram{
-    width: 80%;
-    height:30%;
-
-}
-
-.card{
-    background-color: #E7DAED;
-    border: #E7DAED;
-    
-
-}
-.card img {
-   
     width: 30%;
     height:30%;
+
 }
 
-
-
-@media (max-width: 768px) {
-    .btn-2 {
-        padding: 15px 105px;
-    }
-    .fcb{
-        padding: 15px 170px;
-
-    }
-    .x{
-        padding: 15px 170px;
-
-    }
-    .instagram{
-        padding: 15px 170px;
-
-    }
+.imgPrincipal{
+    display: flex;
+    justify-content: center;
 }
 
-
-
-.h1{
-    text-align: center;
+.inicioSesion{
+    width: 719px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #C6A6A6;
+    background-color: #C6A6A6;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 30px;
-    color: #8A7488;
-    font-weight: bold;
-}
-
-
-.btnenviar{
     font-weight: bold;
     color: white;
-
-}
-
-
-
-.fondo{
-    background: #D7CFCF;
-}
-
-.parte{
-    
-    background: #8A7488;
-    text-align: center;
 }
 
 .ubicacion {
