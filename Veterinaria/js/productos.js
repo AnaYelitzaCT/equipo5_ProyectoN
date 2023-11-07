@@ -1,46 +1,68 @@
 
-function addItem(item){
-    const itemHTML = '<div class="card" style="width: 18rem;">\n' +
-        '    <img src="'+item.img +'" class="card-img-top" alt="image">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">'+item.name+'</h5>\n' +
-        '        <p class="card-text">'+item.description+'</p>\n' +
-        '        <a href="#" class="btn btn-primary">Add</a>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<br/>';
-    const itemsContainer = document.getElementById("list-items");
-    itemsContainer.innerHTML += itemHTML;
-}
-
-
-addItem({'id':'1','categoría':'Alimento','Nombre':'Royal Canin','Descripción':'Alimento para gato','Precio':'$235.00',
-    'img':'./src/royal.png"',})
-
-addItem({'id':'2','categoría':'Alimento','Nombre':'NUCAT','Descripción':'Alimento para gato 13 kg','Precio':'$100.00',
-    'img':'./src/2.png',})
-
-addItem({'id':'3','categoría':'Alimento','Nombre':'Whiskas','Descripción':'Alimento para gato carne 3 kg','Precio':'$184.67',
-    'img':'./src/3.png',})
-
-addItem({'id':'4','categoría':'Alimento','Nombre':'Purina felix','Descripción':'Purina felix','Precio':'$89.63',
-    'img':'./src/4.png',})
-
-addItem({'id':'5','categoría':'Alimento','Nombre':'Fancy Feast','Descripción':'Alimento para gato en lata sabor pollo','Precio':'$99.00',
-    'img':'./src/5.png',})
-
-addItem({'id':'6','categoría':'Juguetes','Nombre':'Kit Cat"','Descripción':'Alimento para gato en lata, sabor atún','Precio':'$74.50',
-    'img':'./src/6.png',})
-
-addItem({'id':'7','categoría':'Juguetes','Nombre':'Ratón de tela','Descripción':'Alimento para gato 13 kg','Precio':'$100.00',
-    'img':'./src/7.png',})
-
-addItem({'id':'8','categoría':'Juguetes','Nombre':'Juguete para mascota','Descripción':'Juguete pasa mascota de tela suave en colores verde y amarillo','Precio':'$60.20"',
-    'img':'./src/8.png',})
-
-addItem({'id':'9','categoría':'Juguetes','Nombre':'Balón para mascota','Descripción':'Juguete pasa mascota de tela suave en forma de balón','Precio':'$45.70',
-    'img':'./src/9.png',})
-
-addItem({'id':'10','categoría':'Alimento','Nombre':'Rascador para mascota','Descripción':'Rascador para gato tamaño mediano','Precio':'$130.10',
-    'img':'./src/10.png',})
-
+class Person{
+    name="";
+    email="";
+    age="";
+    resume="";
+    id=0;
+  
+    static total=0;
+  
+  constructor(name, email, age, resume){
+    this.name=name.toUpperCase();
+    this.email=email.toLowerCase();
+    this.age=(age<18)?18:age;
+    this.resume=resume;
+    Person.total++;
+    this.id = Person.total;
+  }//constructor
+  static printTotal(div){
+    div.insertAdjacentHTML("afterbegin",`<div class="alert alert-danger" role="alert">
+                         Total de personas <strog>${Person.total}</strong></div>
+    
+    `);
+  }
+  
+  printInfo(div){
+    let card=`<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">${this.id}.- ${this.email}</div>
+    <div class="card-body" id="cardBody_${this.id}">
+      <h5 class="card-title">${this.name} - ${this.age} pesos.</h5>
+      <p class="card-text">${this.resume}</p>
+    </div>
+  </div>`;
+    div.insertAdjacentHTML("beforeend",card);
+  }//printInfo
+  }//class  Person
+  
+  class Employee extends Person {
+    department="";
+    salary="0.0";
+  
+    constructor(name, email, age, resume,department, salary){
+       super(name, email, age, resume);
+       this.department=department;
+       this.salary=salary;
+    }//constructor
+  
+    printInfo(div){
+       super.printInfo(div);
+       let cardBody=document.getElementById(`cardBody_${this.id}`);
+       cardBody.insertAdjacentHTML("beforeend",`
+       <p class="card-text">${this.department}</p>
+       <p class="card-text">$${this.salary} </p>
+       `)
+    }
+  }//class employee
+  
+  let divObjetos = document.getElementById("divObjetos");
+  let empleados=[];//arreglo
+  empleados.push(new Employee("Royal Canin", "Alimento", 235, "Alimento para gato","Dev",67268726));
+  empleados.push(new Employee("NUCAT","Alimento", 100, "Alimento para gato 13 kg","Dev",6726872));
+  empleados.push(new Employee("Whiskas", "Alimento", 184,"Alimento para gato carne 3 kg","Dev",672687 ));
+  empleados.push(new Employee("Purina felix", "Alimento", 89,"Alimento para gato en lata","Dev",6726 ));
+  empleados.push(new Employee("Purina felix", "Alimento", 99,"Alimento para gato en lata sabor pollo ","Dev",6726 ));
+  empleados.push(new Employee("Kit Cat", "Alimento", 74,"Alimento para gato en lata, sabor atún","Dev",6726 ));
+  
+  empleados.forEach((e)=> e.printInfo(divObjetos));
+  Person.printTotal(divObjetos);
