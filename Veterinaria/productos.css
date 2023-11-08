@@ -8,7 +8,39 @@ body{
     padding: 5px;
     
 }
+.card{
+    background-color: #B69CB3;
+    display: inline-flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
 
+.card-img-top{
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.card-title{
+    font-size: larger;
+    text-align: center;
+}
+.card-text{
+   color: #efe0ee;
+   font-size: larger;
+   text-align: center;
+}
+.configBtn{
+   background-color: #8A7488;
+   display:flex;
+  justify-content: center;
+  border-radius: 10px;
+  border-color: #B69CB3;
+  margin-bottom: 20px;
+}
 nav{
     display: inline; 
     align-items: center;
