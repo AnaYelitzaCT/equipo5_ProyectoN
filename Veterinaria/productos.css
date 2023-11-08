@@ -63,6 +63,7 @@ nav li:hover{
     justify-content: center;
 }
 
+
 .inicioSesion{
     width: 719px;
     margin: 0 auto;
@@ -76,6 +77,15 @@ nav li:hover{
     color: white;
 }
 
+.fondo{
+    background: #D7CFCF;
+}
+
+.parte{
+    
+    background: #8A7488;
+}
+
 .ubicacion {
 
     background-color: #C6A6A6;
@@ -84,6 +94,7 @@ nav li:hover{
     text-align: center; 
     color: white;
     border: #8A7488;
+    justify-content: center;
     
   }
 
