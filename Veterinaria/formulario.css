@@ -12,9 +12,21 @@ body{
 .container{
     align-items: center;
     
-  
+    /* diseño de boton de cloudinary */
+}  
+.cloudinary-button{
+    color: white;
+    background-color: blue;
+    width: 200px;
+    height: 50px;
 }
-
+ /* diseño de botones ordinarios que tienen funcionamiento */
+.btn-primary{
+    color: white;
+    background-color: blue;
+    width: 200px;
+    height: 50px;
+}
 
 nav{
     display: inline; 
