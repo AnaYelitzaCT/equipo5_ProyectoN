@@ -1,0 +1,1 @@
+let infoBoton = document.getElementById("reset");
