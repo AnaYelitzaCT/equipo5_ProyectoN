@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <script src="./js/formulario.js"></script> 
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #E7DAED;">
             
@@ -115,12 +114,17 @@
         </div>
       
         <div class="mb-3">
-          <button class="btn btn-primary" type="reset" enable>Borrar</button>
-          <button class="btn btn-primary" type="submit" enable>Agregar</button>
-          <!-- botón de cloudinary -->
-          <button id="upload_widget" class="cloudinary-button">Subir imagen</button>
+               <!-- botón de cloudinary -->
+              <div> <button id="upload_widget" class="cloudinary-button">Agregar datos</button>
+              </div>
+          <button class="btn btn-primary" type="reset" enable>Borrar</button><div>
+           
+        </div>
+         
+          
         </div>
       </form>
+    
     </div>
 
       <!-- termina formulario -->
@@ -162,14 +166,17 @@
                             <div class="input-group mb-3">
                                 <input class="form-control" type="text" placeholder="ingresa producto a buscar"
                                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <button class="btn btn-primary" id="button-addon2" type="button"><i
-                                        class="fas fa-paper-plane"></i></button>
+                                
+                                       
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- etiqueta de cloudinary -->
+  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">  
+  </script>
 </body>
 
 </html>

@@ -16,14 +16,14 @@ body{
 }  
 .cloudinary-button{
     color: white;
-    background-color: blue;
+    background-color: #874F81;
     width: 200px;
     height: 50px;
 }
  /* diseño de botones ordinarios que tienen funcionamiento */
 .btn-primary{
     color: white;
-    background-color: blue;
+    background-color: #874F81;
     width: 200px;
     height: 50px;
 }
@@ -60,14 +60,14 @@ nav li:hover{
 }
 
 .fcb{
-    width: 80%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
     
 
 }
 
 .x{
-    width: 80%;
+    width: 30%;
     height: 30%;
 
 }
