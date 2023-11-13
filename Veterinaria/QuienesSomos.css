@@ -145,6 +145,18 @@ body{
     color: white;
     background-color: #8A7488;
 }
+.card{
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10%;
+    height: 80px;
+}
+.card img{
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
 
 .card:hover{
     background-color: #8A7488;

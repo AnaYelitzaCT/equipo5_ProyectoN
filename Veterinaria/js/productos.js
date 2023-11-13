@@ -8,7 +8,7 @@ function addItem(item){
         '        <a href="#" class="btn btn-primary configBtn">Agregar</a>\n' +
         '</div>\n' +
         '<br/>';
-        console.log("Esto es lo que trae item: "+itemHTML)
+
     const itemsContainer = document.getElementById("list-items");
      itemsContainer.innerHTML += itemHTML;
 }
