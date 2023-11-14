@@ -29,7 +29,7 @@ nav{
 nav li:hover{
     background-color: pink;
     text-decoration: underline;
-  
+    display: inline;
     margin: 0 0 0 15px;
     color: #874F81;
     font-weight: bold;
