@@ -10,6 +10,8 @@ body{
     
 }
 
+
+
 nav{
     display: inline; 
     align-items: center;
@@ -27,7 +29,7 @@ nav{
 nav li:hover{
     background-color: pink;
     text-decoration: underline;
-    display: inline;
+  
     margin: 0 0 0 15px;
     color: #874F81;
     font-weight: bold;
@@ -36,8 +38,8 @@ nav li:hover{
 
 
 .logo_mascotitas{
-    width: 25%;
-    height: 25%;
+    width: 35%;
+    height: 35%;
     
 }
 

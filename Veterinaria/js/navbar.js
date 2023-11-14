@@ -2,7 +2,7 @@ var navbar = document.getElementById("parteNavbar");
 navbar.innerHTML = `        <nav class="navbar navbar-expand-lg" style="background-color: #E7DAED;">
             
 <div class="container">
-    <a class="navbar brand" href="index.html"><img class="logo_mascotitas" src="./src/logo_mascotitas.png"></a>
+    <a class="navbar brand" href="index.html"><img class="logo_mascotitas" src="./src/logo_mascotitas.png" ></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
