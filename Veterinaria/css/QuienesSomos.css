@@ -48,11 +48,7 @@ nav li:hover{
 
 }
 
-.x{
-    width: 80%;
-    height: 30%;
 
-}
 
 .instagram{
     width: 80%;
@@ -152,7 +148,7 @@ body{
     width: 10%;
     height: 80px;
 }
-}
+
 .card img{
     margin-left: 30px;
     width: 40px;
