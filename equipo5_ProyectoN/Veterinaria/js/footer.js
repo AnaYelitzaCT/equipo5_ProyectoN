@@ -1,38 +1,39 @@
 
 var footer = document.getElementById("partefooter");
-footer.innerHTML = `<section id="footer" class="pie" style="background-color: #8A7488"; >
-<footer>
-  <div class="text-center">
-    <button type="button" class="btn-1"
-    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 20px; color: #363062;">
-Ubicación
-</button>
-
-<div class="texto_pie">
-<h5 class="text-white mb-3">Páginas más visitadas</h5>
-<ul class="list-unstyled text-muted">
-  
-  <li><a class="texto_pie1" href="QuienesSomos.html">Nosotras</a></li>
-  <li><a  class="texto_pie1" href="productos.html">Tienda</a></li>
-  <li><a  class="texto_pie1"     href="formulario.html">Registro de productos</a></li>
-
-</ul>
+footer.innerHTML = `<div class="container py-4" >
+<div class="row gy-4 gx-5">
+<div class="col-lg-4 col-md-6">
+    <h5 class="h1 text-white">Acerca de nuestro trabajo</h5>
+    <p class="small text-muted">.</p>
+    <p class="small text-muted mb-0">&copy; <a class="text-primary"
+            href="https://github.com/AnaYelitzaCT/equipo5_ProyectoN">Nuestra página de proyecto</a>
+    </p>
 </div>
+<div class="col-lg-2 col-md-6">
+    <h5 class="text-white mb-3">Nuestras páginas más visitadas</h5>
+    <ul class="list-unstyled text-muted">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="QuienesSomos.html">¿Quienes somos?</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Tienda</a></li>
+        <li><a href="formulario.html">Registro de productos</a></li>
 
-  </div>
-  <div class="footer">
-
-    <a href="" class="icono1"><iconify-icon icon="logos:visa"  width="50" style="padding-bottom: 7px; padding-right: 25px;"></iconify-icon></a>
-      <a href="" class="icono1"><iconify-icon icon="logos:mastercard"  width="40" style="padding-right: 25px"></iconify-icon></a>
-      <a href="" class="icono1"><iconify-icon icon="simple-icons:americanexpress"  width="28"></iconify-icon></a>
-  
-  </div>
- 
-
-  
-  <div> <h2 class="texto_footer">Copyright © 2023</h2>
-  </div>
-
-  
-</footer>
-</section>`;
+    </ul>
+</div>
+<div class="col-lg-2 col-md-6">
+    <img class="perrito" src="./src/perrito.png" alt="" width="100px" height="100px">
+</div>
+<div class="col-lg-4 col-md-6">
+    <h5 class="text-white mb-3">Promociones</h5>
+    <p class="small text-muted"></p>
+    <form action="#">
+        <div class="input-group mb-3">
+            <input class="form-control" type="text" placeholder="ingresa producto a buscar"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-primary" id="button-addon2" type="button"><i
+                    class="fas fa-paper-plane"></i></button>
+        </div>
+    </form>
+</div>
+</div>
+</div>`;
