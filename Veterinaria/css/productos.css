@@ -11,9 +11,9 @@ body{
 .card{
     background-color: #B69CB3;
     display: inline-flex;
-    margin-top: 30px;
+    margin-top: 120px;
     margin-bottom: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-right: 20px;
 }
 
@@ -28,10 +28,17 @@ body{
     font-size: larger;
     text-align: center;
 }
+.card-text1{
+    font-size: larger;
+    text-align: center;
+    color: #fff;
+    
+}
 .card-text{
    color: #efe0ee;
    font-size: larger;
    text-align: center;
+   
 }
 .configBtn{
    background-color: #8A7488;
