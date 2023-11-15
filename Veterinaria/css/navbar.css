@@ -45,6 +45,7 @@
   .navbar-nav .menu__list a{
     display: flex;
     justify-content: space-between;
+    background-color: #8A7488;
     
   }
   
@@ -66,6 +67,7 @@
   
  .nav-item_redes{
     text-decoration: none;
+    background-color: #8A7488;
  }
 
  .nav-item_redes:hover {
