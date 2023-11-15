@@ -21,74 +21,10 @@ body{
     
 }
 
-<<<<<<< HEAD:equipo5_ProyectoN/Veterinaria/css/contacto.css
-=======
-nav{
-    display: inline; 
-    align-items: center;
-}
-
-.nav-link{
-    text-transform: uppercase;
-    color: #874F81;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-}
-
-
-nav li:hover{
-    background-color: pink;
-    text-decoration: underline;
-    display: inline;
-    margin: 0 0 0 15px;
-    color: #874F81;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.logo_mascotitas{
-    width: 35%;
-    height: 35%;
-    
-}
-
-.fcb{
-    width: 80%;
-    height: 50%;
-    
-
-}
-
-.x{
-    width: 80%;
-    height: 30%;
->>>>>>> 2fc3f4ba7c569c8f945d80b13e6b1102541af542:Veterinaria/contacto.css
 
 
 
-<<<<<<< HEAD:equipo5_ProyectoN/Veterinaria/css/contacto.css
-=======
-.card{
-    display:inline-flex;
-    flex-direction: row;
-    align-items: center;
-    width: 10%;
-    height: 80px;
-}
-.card img{
-    margin-left: 30px;
-    width: 40px;
-    height: 40px;
-}
->>>>>>> 2fc3f4ba7c569c8f945d80b13e6b1102541af542:Veterinaria/contacto.css
 
-.card:hover{
-    background-color: #8A7488;
-    text-decoration-color: #8A7488;
-    color: white;
-}
 
 
 
