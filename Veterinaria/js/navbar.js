@@ -30,3 +30,4 @@ navbar.innerHTML = `        <nav class="navbar navbar-expand-lg" style="backgrou
   <a class="carrito" href="tienda.html"><img  src="./src/image 14.png"></a>
 </div>
 </nav>`;
+

@@ -9,7 +9,29 @@ body{
     padding: 5px;
     
 }
+.carousel-dark 
+{
+    background-color: #874F81;
+    background: linear-gradient(purple, 10%, pink);
+}
+.btn-primary
+{
+        border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color:#B69CB3;
+    color: #ffffff; 
+    text-decoration:solid;
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 80px; /*bordes redondos*/
+    }
 
+.carousel-caption
+{
+    text-align-last: right;
+    text-decoration: #874F81;
+    text-decoration:solid;
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+}
 nav{
     display: inline; 
     align-items: center;

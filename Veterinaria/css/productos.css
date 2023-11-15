@@ -16,6 +16,23 @@ body{
     margin-left: 50px;
     margin-right: 20px;
 }
+/* botón de Registro de proveedores */
+.proveedores{
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color:#B69CB3;
+color: #ffffff; 
+text-decoration:solid;
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 80px; /*bordes redondos*/
+}
+.grid {
+    display: grid;
+    place-items: center;
+  
+    height: 100px;
+    width: 200px;
+}
 
 .card-img-top{
     width: 200px;
