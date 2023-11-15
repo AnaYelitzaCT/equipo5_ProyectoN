@@ -35,7 +35,7 @@ navbar.innerHTML = `
                         <a href="" class="header__menu-link"><iconify-icon icon="openmoji:cat-face" width="40"></iconify-icon></iconify-icon></a>
                       </li>
                       <li class="menu__list">
-                        <a href="" class="header__menu-link"><iconify-icon icon="ph:user-duotone" style="color: black;" width="40"></iconify-icon></a>
+                        <a href="registro.html" class="header__menu-link"><iconify-icon icon="ph:user-duotone" style="color: black;" width="40"></iconify-icon></a>
                       </li>
                       <li class="menu__list">
                         <a href="" class="header__menu-link"><iconify-icon icon="basil:shopping-cart-solid" style="color: black;" width="40"></iconify-icon></a>
