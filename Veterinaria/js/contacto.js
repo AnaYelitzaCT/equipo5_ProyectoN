@@ -1,46 +1,37 @@
-emailjs.init('lWoM7i5rmAA-HDtbS')
-const btn = document.getElementById('button');
+let id = (id) => document.getElementById(id);
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-  let name = document.getElementById('name');// es el componente nombre pero no es el valor del campo nombre
-  let numtel = document.getElementById('phone');// es el componente nombre pero no es el valor del campo nombre
-  // comienzan validaciones
-  if(/[\d]/.test(name.value)===true){
-    alert('Porfavor coloque un nombre sin numeros ');
-    //enviamos la variable que hace referencia al componente
-    cleanAndFocus(name);
-   // document.getElementById("name").value = "";
-    //document.getElementById("name").focus();
-  }
-  else if(/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(name.value)===true){
-    alert('Porfavor coloque un nombre sin caracteres especiales ');
-    cleanAndFocus(name);
-  }else if(numtel.value.length !=10){
-    alert('Porfavor coloque un número de telefono valido');
-    cleanAndFocus(numtel);
-  }
-  else{
-    btn.value = 'Enviando mensaje...';
-    const serviceID = 'default_service';
-    const templateID = 'template_n7cj7q6';
-    emailjs.sendForm(serviceID, templateID, this)
-     .then(() => {
-       btn.value = 'Send Email';
-       alert('Mensaje enviado gracias por contactarnos!');
-       document.getElementById('form').reset();
-     }, (err) => {
-       btn.value = 'Send Email';
+let classes = (classes) => document.getElementsByClassName(classes);
 
-       alert(JSON.stringify(err));
-     });
-    
-  }
-   
+let username = id("username"),
+  email = id("email"),
+  password = id("password"),
+  form = id("form"),
+  errorMsg = classes("error"),
+  successIcon = classes("success-icon"),
+  failureIcon = classes("failure-icon");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  engine(username, 0, "Username cannot be blank");
+  engine(email, 1, "Email cannot be blank");
+  engine(password, 2, "Password cannot be blank");
 });
 
-function cleanAndFocus(component){
-  component.value ="";
-  component.focus();
-}
+let engine = (id, serial, message) => {
+  if (id.value.trim() === "") {
+    errorMsg[serial].innerHTML = message;
+    id.style.border = "2px solid red";
+
+    // icons
+    failureIcon[serial].style.opacity = "1";
+    successIcon[serial].style.opacity = "0";
+  } else {
+    errorMsg[serial].innerHTML = "";
+    id.style.border = "2px solid green";
+
+    // icons
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
+  }
+};
