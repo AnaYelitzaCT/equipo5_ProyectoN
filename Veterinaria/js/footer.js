@@ -41,7 +41,7 @@ footer.innerHTML = `
     <a href="">Inicio de sesión</a>
   </p>
   <p>
-    <a href="">Registro de productos</a>
+    <a href="formulario.html">Registro de productos</a>
   </p>
   <p>
    
