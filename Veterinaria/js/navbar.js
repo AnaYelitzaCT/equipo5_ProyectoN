@@ -33,8 +33,8 @@ navbar.innerHTML = `
             </ul>
 
             <div >
-            <a  href="#"><iconify-icon icon="bxs:user" style="color: black;" width="40"></iconify-icon></a>
-            <a  href="#"><iconify-icon icon="zondicons:shopping-cart" style="color: black;" width="40"></iconify-icon></a>
+            <a  href="./registro.html"><iconify-icon icon="bxs:user" style="color: black;" width="40"></iconify-icon></a>
+            <a  href="./productos.html"><iconify-icon icon="zondicons:shopping-cart" style="color: black;" width="40"></iconify-icon></a>
             
           
           

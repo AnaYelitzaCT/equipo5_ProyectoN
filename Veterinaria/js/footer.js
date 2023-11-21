@@ -38,7 +38,7 @@ footer.innerHTML = `
   <h5 class="text-uppercase mb-4 font-weight-bold ">Registro</h5>
   <hr class="mb-4 text-danger-emphasis">
   <p>
-    <a href="">Inicio de sesión</a>
+    <a href="./login.html">Inicio de sesión</a>
   </p>
   <p>
     <a href="">Registro de productos</a>
