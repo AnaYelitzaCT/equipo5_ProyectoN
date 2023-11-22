@@ -23,13 +23,13 @@ footer.innerHTML = `
     <h5 class="text-uppercase mb-4 font-weight-bold ">Más visitados</h5>
     <hr class="mb-4 text-danger-emphasis">
     <p>
-      <a href="">Tienda</a>
+      <a href="productos.html">Tienda</a>
     </p>
     <p>
-      <a href="">Servicios</a>
+      <a href="servicios.html">Servicios</a>
     </p>
     <p>
-      <a href="">Contacto</a>
+      <a href="contacto.html">Contacto</a>
     </p>
   </div>
 
