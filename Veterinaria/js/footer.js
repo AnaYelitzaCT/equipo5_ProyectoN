@@ -9,7 +9,7 @@ footer.innerHTML = `
         
         <h5 class="text-uppercase mb-4 font-weight-bold ">Contáctanos</h5>
         <hr class="mb-4 text-danger-emphasis" >
-        <button type="button" class="btn" style="background-color: white; color: black;">Ubicación</button>
+        <a href="ubicacion.html" button type="button" class="btn" style="background-color: white; color: black;">Ubicación</button></a>
         <div class=iconos>
           <a href=""><iconify-icon icon="logos:facebook"></iconify-icon></a>
           <a href=""><iconify-icon icon="skill-icons:instagram"></iconify-icon></a>
@@ -38,10 +38,13 @@ footer.innerHTML = `
   <h5 class="text-uppercase mb-4 font-weight-bold ">Registro</h5>
   <hr class="mb-4 text-danger-emphasis">
   <p>
-    <a href="./login.html">Inicio de sesión</a>
+    <a href="logIn.html">Inicio de sesión</a>
   </p>
   <p>
-    <a href="">Registro de productos</a>
+  <a href="registroUsuarios.html">Regístrate</a>
+</p>
+  <p>
+    <a href="formulario.html">Registro de productos</a>
   </p>
   <p>
    

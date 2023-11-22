@@ -1,54 +1,62 @@
+let id = (id) => document.getElementById(id);
 
-`use strict`;
-const boton_subirFoto=  document.querySelector(`#upload_widget`);
-let widget_cloudinary= cloudinary.createUploadWidget({
-  cloudName: `dginlkrcz`,
-  uploadPresent: `tiendaMascotitas`
+let classes = (classes) => document.getElementsByClassName(classes);
 
-}, (err, result) => {
-  if (!err && result & result.event === `success`){
-    console.log(`Imagen subida con éxito`, result.info);
+let username = id("username"),
+  email = id("email"),
+  password = id("password"),
+  form = id("form"),
+  itemname =id("itemname");
+  itemprice =id("itemprice");
+  itemdesc =id("itemdesc");
+  errorMsg = classes("error"),
+  successIcon = classes("success-icon"),
+  failureIcon = classes("failure-icon");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  engine(username, 0, "este campo no puede registrarse vacío");
+  engine(email, 1, "este campo no puede registrarse vacío");
+  engine(password, 2, "este campo no puede registrarse vacío");
+  engine(itemname, 3, "este campo no puede registrarse vacío");
+  engine(itemprice, 4, "este campo no puede registrarse vacío");
+  engine(itemdesc, 5, "este campo no puede registrarse vacío");
+});
+
+let engine = (id, serial, message) => {
+  if (id.value.trim() === "" ) {
+    errorMsg[serial].innerHTML = message;
+    id.style.border = "2px solid red";
+
+    // icons
+    failureIcon[serial].style.opacity = "1";
+    successIcon[serial].style.opacity = "0";
+  } else {
+    errorMsg[serial].innerHTML = "";
+    id.style.border = "2px solid green";
+
+    // icons
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
   }
+};
 
-  
+// clouninary Section
 
-});
-boton_subirFoto.addEventListener(`click`, ()=>{
-
-});
-
-
-// import "./styles.css"
-
-// document.getElementById("app").innerHTML=`
-// <h1>Upload Widget</h1>
-// <div>
-// <button 
-// id="upload_widget"
-// class="cloudinary-button">
-// Upload files
-// </button>
-// </div>
-// `;
-
-// var myWidget = cloudinary.createUploadWidget(
-//   {
-//     cloudName: 'dginlkrcz', 
-//     uploadPreset: 'tiendaMascotitas'
-//   }, 
-//   (error, result) => { 
-//       if (!error && result && result.event === "success") { 
-//         console.log('Done! Here is the image info: ', result.info); 
-//       }
-//     }
-//   );
-  
-//    document.getElementById("upload_widget").addEventListener(
-//     "click", 
-//     function(){
-//       myWidget.open();
-//    },
-//     false
-//     );
-  
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dginlkrcz',
+  uploadPresent: 'tiendaMascotitas'}, (error, result) => {
+    if (!error && result && result.event ==="success"){
+      console.log('Done! Here is the image info: ', result.info);
+      infowidget = result.info; //test
+      console.log(infowidget); //test
+      return infowidget; //test
+    }
+  }
+)
+submit.addEventListener("click", function(e){
+  e.preventDefault();
+  myWidget.open();
+}, false);
 

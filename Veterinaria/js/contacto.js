@@ -1,4 +1,4 @@
-emailjs.init('lWoM7i5rmAA-HDtbS')
+emailjs.init('lWoM7i5rmAA-HDtbS');
 const btn = document.getElementById('button');
 
 document.getElementById('form')
