@@ -18,11 +18,11 @@ function addItem(item){
 addItem({'id':'1','categoría':'Alimento','Nombre':'Royal Canin','Descripción':'Alimento para gato','Precio':'$235.00',
     'img':'./src/royal.png'});
 
-addItem({'id':'2','categoría':'Alimento','Nombre':'NUCAT','Descripción':'Alimento para gato 13 kg','Precio':'$100.00',
-    'img':'./src/2.png'});
+addItem({'id':'2','categoría':'Alimento','Nombre':'NUCAT','Descripción':'Alimento para gato 15 kg','Precio':'$665.00',
+    'img':'./src/Nupcat.png'});
 
-addItem({'id':'3','categoría':'Alimento','Nombre':'Whiskas','Descripción':'Alimento para gato carne 3 kg','Precio':'$184.67',
-    'img':'./src/3.png'});
+addItem({'id':'3','categoría':'Alimento','Nombre':'Whiskas','Descripción':'Alimento para gato de res 1.5 kg','Precio':'$116.00',
+    'img':'./src/wis.png'});
 
 addItem({'id':'4','categoría':'Alimento','Nombre':'Purina felix','Descripción':'Purina felix','Precio':'$89.63',
     'img':'./src/4.png'});
@@ -36,7 +36,7 @@ addItem({'id':'6','categoría':'Juguetes','Nombre':'Kit Cat','Descripción':'Ali
 addItem({'id':'7','categoría':'Juguetes','Nombre':'Ratón de tela','Descripción':'Alimento para gato 13 kg','Precio':'$100.00',
     'img':'./src/7.png'});
 
-addItem({'id':'8','categoría':'Juguetes','Nombre':'Juguete para mascota','Descripción':'Juguete pasa mascota de tela suave en colores verde y amarillo','Precio':'$60.20"',
+addItem({'id':'8','categoría':'Juguetes','Nombre':'Juguete para mascota','Descripción':'Juguete pasa mascota de tela suave en colores verde y amarillo','Precio':'$60.20',
     'img':'./src/8.png'});
 
 addItem({'id':'9','categoría':'Juguetes','Nombre':'Balón para mascota','Descripción':'Juguete pasa mascota de tela suave en forma de balón','Precio':'$45.70',

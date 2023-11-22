@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background:#fff;
+    background:rgb(232, 225, 231);
     background-size: cover;
     font-family: sans-serif;
     height: 100vh;
@@ -19,6 +19,7 @@ body {
     box-sizing: border-box;
     padding: 70px 30px;
     border-radius: 10%;
+    margin-top: 50px;
     
   }
   
@@ -27,7 +28,7 @@ body {
     height: 130px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: -55px;
     left: calc(50% - 50px);
     padding-top: 15%;
     padding-right: 10%;
@@ -82,7 +83,7 @@ body {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: darkgrey;
+    color: rgb(255, 255, 255);
   }
   
   .login-box a:hover {
