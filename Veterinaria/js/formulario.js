@@ -1,5 +1,5 @@
 let id = (id) => document.getElementById(id);
-
+let preview = id("preview");
 let classes = (classes) => document.getElementsByClassName(classes);
 
 let username = id("username"),
@@ -46,17 +46,14 @@ let engine = (id, serial, message) => {
 
 var myWidget = cloudinary.createUploadWidget({
   cloudName: 'dginlkrcz',
-  uploadPresent: 'tiendaMascotitas'}, (error, result) => {
-    if (!error && result && result.event ==="success"){
-      console.log('Done! Here is the image info: ', result.info);
-      infowidget = result.info; //test
-      console.log(infowidget); //test
-      return infowidget; //test
-    }
-  }
+  uploadPreset: 'tiendaMascotitas'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      console.log('Done! Here is the image info: ', result.info.url); 
+      preview.src= result.info.thumbnail_url;
+    }//if
+  }//error, result
 )
-submit.addEventListener("click", function(e){
-  e.preventDefault();
-  myWidget.open();
-}, false);
 
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);

@@ -11,121 +11,40 @@
 </head>
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/formulario.css">
-<link rel="stylesheet" href="./css/navbar.css">
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> 
 <!-- esto es vincular el main js -->
-
 <body>
-
 </header>
- 
 
-  <div class="container">
+ <div class="container">
     <div class="content">
       <div class="logo">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <img src="src/paraForm.png" alt="" />
       </div>
+
       <div class="image">
       
       </div>
       <div class="text">
         Mascotitas <br />
-        tu mejor opción para el cuidado de tu mascota
+        Tu mejor opción para el cuidado de tu mascota
       </div>
     </div>
     <form id="form">
       <div class="social">
-        <div class="title">Registro de productos para mascotitas</div>
-        <div class="question">
-           <br />
-          <span></span>
-        </div>
-
-        <div class="btn">
-          <div class="btn-1">
-         
-          </div>
-          <div class="btn-2">
-       
-          </div>
-        </div>
-
-        <div class="registro">Registo de productos</div>
-      </div>
-          <!-- /** 
-        * ! carga de imagen Input here
-       **/ -->
       
+        <div class="registro">Registro de productos</div>
+      </div>
+
+      <img  id="preview" alt="">
       <div>
-        <input type="file" class="form-control" aria-label="file example" required>
-    <div class="invalid-feedback">Favor de seleccionar un archivo </div>
+        <!-- preview para cargar un previo de la imagen-->
+    <div>
+      <button id="upload_widget" class="cloudinary-button">Seleccionar archivo</button>
+      </div>
     <!-- botón de cloudinary-button
     <button id="upload_widget" class="cloudinary-button">Upload files</button> -->
       </div>
-      <!-- /** 
-        * ! user name Input here
-       **/ -->
-
-      <div>
-        <label for="username">Nombre de usuario</label>
-        <i class="fas fa-user"></i>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Ejemplo de nombre: Juan Perez"
-        />
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
-      </div>
-      <!-- /** 
-        * ! Password Input here
-       **/ -->
-
-      <div>
-        <label for="password">Contraseña</label>
-        <i class="fas fa-lock"></i>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Contraseña valida de proveedor"
-        />
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
-      </div>
-       <!-- /** 
-        * ! Email Input here
-       **/ -->
-
-       <div>
-        <label for="email">Correo electrónico</label>
-        <i class="far fa-envelope"></i>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="abc@gmail.com"
-        />
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
-      </div>
-       <!-- /** 
-        * ! nombre de producto
-       **/ -->
 
        <div>
         <label for="itemname">Nombre de producto</label>
@@ -140,11 +59,21 @@
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div>
       </div>
-       <!-- /** 
-        * ! precio del producto
-       **/ -->
+      
+      <div>
+        <label for="validationTooltip04" class="form-label">Selecciona categoría</label>
+        <select class="form-select" id="validationTooltip04" required>
+          <i class="fas fa-user"></i>
+          <option selected disabled value="">Seleccionar</option>
+          <option>Alimento</option>
+          <option>Ropa</option>
+          <option>Otros</option>
+        </select>
+        <div class="invalid-tooltip">
+        Agrega la categoría
+        </div>
 
-       <div>
+        <div>
         <label for="itemprice">Precio del producto</label>
         <i class="fas fa-price"></i>
         <input
@@ -157,10 +86,7 @@
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div>
       </div>
-       <!-- /** 
-        * !  descripción del producto
-       **/ -->
-
+   
        <div>
         <label for="itemdesc">descripción del producto</label>
         <i class="fas fa-desc"></i>
@@ -174,28 +100,21 @@
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div>
       </div>
-
-
-      <button type="submit" id="submit">Enviar</button>
+           <button type="submit" id="submit">Enviar</button>
       <button type="reset" id="reset">Limpiar</button>
+      <div>
+        <br>
+      <a href="index.html" class="btn btn-primary" role="button" data-bs-toggle="button">Regresar al inicio</a>
+        </div>
     </form>
-  </div>
-  
-  <script src="./js/formulario.js"></script> 
-  <!-- FOOTER -->
-  
-  <div class="fondo">
-    <footer class="w-100 py-4 flex-shrink-0" id="partefooter">
-            
-      <script src="./js/footer.js"></script>
-     
-  </footer>
   </div>
   
 
 
 </body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="./js/contacto.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" defer type="text/javascript"></script>
+
+<script src="./js/formulario.js" defer></script> 
 
 </html>
