@@ -1,46 +1,56 @@
-let id = (id) => document.getElementById(id);
-let preview = id("preview");
-let classes = (classes) => document.getElementsByClassName(classes);
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
 
-let username = id("username"),
-  email = id("email"),
-  password = id("password"),
-  form = id("form"),
-  itemname =id("itemname");
-  itemprice =id("itemprice");
-  itemdesc =id("itemdesc");
-  errorMsg = classes("error"),
-  successIcon = classes("success-icon"),
-  failureIcon = classes("failure-icon");
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+    // Obtener valores de los campos
+    const itemName = document.getElementById('itemname').value;
+    const categoria = document.getElementById('validationTooltip04').value;
+    const itemPrice = document.getElementById('itemprice').value;
+    const itemDesc = document.getElementById('itemdesc').value;
 
-  engine(username, 0, "este campo no puede registrarse vacío");
-  engine(email, 1, "este campo no puede registrarse vacío");
-  engine(password, 2, "este campo no puede registrarse vacío");
-  engine(itemname, 3, "este campo no puede registrarse vacío");
-  engine(itemprice, 4, "este campo no puede registrarse vacío");
-  engine(itemdesc, 5, "este campo no puede registrarse vacío");
-});
+    // Validaciones básicas
+    if (!itemName || !categoria || !itemPrice || !itemDesc) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
 
-let engine = (id, serial, message) => {
-  if (id.value.trim() === "" ) {
-    errorMsg[serial].innerHTML = message;
-    id.style.border = "2px solid red";
-
-    // icons
-    failureIcon[serial].style.opacity = "1";
-    successIcon[serial].style.opacity = "0";
-  } else {
-    errorMsg[serial].innerHTML = "";
-    id.style.border = "2px solid green";
-
-    // icons
-    failureIcon[serial].style.opacity = "0";
-    successIcon[serial].style.opacity = "1";
+   // Validación de precio como número decimal con máximo dos decimales
+   if (!(/^\d+(\.\d{1,2})?$/.test(itemPrice))) {
+    alert('Ingresa un precio válido con hasta dos decimales.');
+    return;
   }
-};
+
+    // Validar que la descripción no exceda los 200 caracteres
+    if (itemDesc.length > 200) {
+      alert('La descripción no puede exceder los 200 caracteres.');
+      return;
+    }
+
+    // Guardar datos en el localStorage
+    const formData = {
+      itemName,
+      categoria,
+      itemPrice,
+      itemDesc
+    };
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+    alert('Sus datos fueron recibidos con éxito! la información será procesada');
+
+    // Puedes limpiar el formulario si deseas
+    form.reset();
+  });
+
+  // Recuperar datos del localStorage si existen al cargar la página
+  const savedFormData = localStorage.getItem('formData');
+  if (savedFormData) {
+    const parsedFormData = JSON.parse(savedFormData);
+    // Puedes utilizar los datos recuperados para lo que necesites en tu aplicación
+    console.log(parsedFormData);
+  }
+});
 
 // clouninary Section
 
