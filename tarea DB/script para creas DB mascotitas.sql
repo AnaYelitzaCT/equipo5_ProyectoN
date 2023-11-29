@@ -5,136 +5,137 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema mascotitas
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema mascotitas
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
--- -----------------------------------------------------
--- Schema new_schema1
--- -----------------------------------------------------
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `mascotitas` DEFAULT CHARACTER SET utf8 ;
+USE `mascotitas` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`cliente`
+-- Table `mascotitas`.`cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cliente` (
-  `idcliente` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `mascotitas`.`cliente` (
+  `idcliente` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `telefono` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `contraseña` VARCHAR(8) NOT NULL,
+  `contraseña` VARCHAR(45) NOT NULL,
+  `telefono` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`idcliente`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`categoria`
+-- Table `mascotitas`.`venta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`categoria` (
+CREATE TABLE IF NOT EXISTS `mascotitas`.`venta` (
+  `idventa` INT NOT NULL AUTO_INCREMENT,
+  `tipoPago` VARCHAR(45) NOT NULL,
+  `total` DECIMAL NULL,
+  PRIMARY KEY (`idventa`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mascotitas`.`categoria`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mascotitas`.`categoria` (
   `idcategoria` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
+  `categoriacol` VARCHAR(45) NULL,
   PRIMARY KEY (`idcategoria`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`productos`
+-- Table `mascotitas`.`productos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`productos` (
+CREATE TABLE IF NOT EXISTS `mascotitas`.`productos` (
   `idproductos` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `descripcion` VARCHAR(200) NOT NULL,
   `precio` DECIMAL NOT NULL,
   `imagen` VARCHAR(200) NOT NULL,
+  `cliente_idcliente` INT NOT NULL,
+  `venta_idventa` INT NOT NULL,
   `categoria_idcategoria` INT NOT NULL,
-  PRIMARY KEY (`idproductos`, `categoria_idcategoria`),
-  INDEX `fk_productos_categoria1_idx` (`categoria_idcategoria` ASC) VISIBLE)
+  `cliente_idcliente1` INT NOT NULL,
+  PRIMARY KEY (`idproductos`, `cliente_idcliente`, `venta_idventa`, `categoria_idcategoria`, `cliente_idcliente1`),
+  INDEX `fk_productos_cliente_idx` (`cliente_idcliente` ASC) VISIBLE,
+  INDEX `fk_productos_venta1_idx` (`venta_idventa` ASC) VISIBLE,
+  INDEX `fk_productos_categoria1_idx` (`categoria_idcategoria` ASC) VISIBLE,
+  INDEX `fk_productos_cliente1_idx` (`cliente_idcliente1` ASC) VISIBLE,
+  CONSTRAINT `fk_productos_cliente`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `mascotitas`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_venta1`
+    FOREIGN KEY (`venta_idventa`)
+    REFERENCES `mascotitas`.`venta` (`idventa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_categoria1`
+    FOREIGN KEY (`categoria_idcategoria`)
+    REFERENCES `mascotitas`.`categoria` (`idcategoria`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_cliente1`
+    FOREIGN KEY (`cliente_idcliente1`)
+    REFERENCES `mascotitas`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`servicios`
+-- Table `mascotitas`.`servicios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`servicios` (
+CREATE TABLE IF NOT EXISTS `mascotitas`.`servicios` (
   `idservicios` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(200) NOT NULL,
-  `imagen` VARCHAR(200) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `telefono` VARCHAR(10) NOT NULL,
   `precio` DECIMAL NOT NULL,
   `venta_idventa` INT NOT NULL,
-  `venta_cliente_idcliente` INT NOT NULL,
-  `venta_venta_idventa` INT NOT NULL,
-  `venta_venta_cliente_idcliente` INT NOT NULL,
-  PRIMARY KEY (`idservicios`, `venta_idventa`, `venta_cliente_idcliente`, `venta_venta_idventa`, `venta_venta_cliente_idcliente`))
+  `cliente_idcliente` INT NOT NULL,
+  PRIMARY KEY (`idservicios`, `venta_idventa`, `cliente_idcliente`),
+  INDEX `fk_servicios_venta1_idx` (`venta_idventa` ASC) VISIBLE,
+  INDEX `fk_servicios_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE,
+  CONSTRAINT `fk_servicios_venta1`
+    FOREIGN KEY (`venta_idventa`)
+    REFERENCES `mascotitas`.`venta` (`idventa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_servicios_cliente1`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `mascotitas`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`venta`
+-- Table `mascotitas`.`cliente_has_venta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`venta` (
-  `idventa` INT NOT NULL AUTO_INCREMENT,
-  `tipoPago` VARCHAR(45) NOT NULL,
-  `total` DECIMAL NOT NULL,
+CREATE TABLE IF NOT EXISTS `mascotitas`.`cliente_has_venta` (
   `cliente_idcliente` INT NOT NULL,
   `venta_idventa` INT NOT NULL,
-  `venta_cliente_idcliente` INT NOT NULL,
-  PRIMARY KEY (`idventa`, `cliente_idcliente`, `venta_idventa`, `venta_cliente_idcliente`),
-  INDEX `fk_venta_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`cliente_has_servicios`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cliente_has_servicios` (
-  `cliente_idcliente` INT NOT NULL,
-  `servicios_idservicios` INT NOT NULL,
-  `servicios_venta_idventa` INT NOT NULL,
-  `servicios_venta_cliente_idcliente` INT NOT NULL,
-  `servicios_venta_venta_idventa` INT NOT NULL,
-  `servicios_venta_venta_cliente_idcliente` INT NOT NULL,
-  PRIMARY KEY (`cliente_idcliente`, `servicios_idservicios`, `servicios_venta_idventa`, `servicios_venta_cliente_idcliente`, `servicios_venta_venta_idventa`, `servicios_venta_venta_cliente_idcliente`),
-  INDEX `fk_cliente_has_servicios_servicios1_idx` (`servicios_idservicios` ASC, `servicios_venta_idventa` ASC, `servicios_venta_cliente_idcliente` ASC, `servicios_venta_venta_idventa` ASC, `servicios_venta_venta_cliente_idcliente` ASC) VISIBLE,
-  INDEX `fk_cliente_has_servicios_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`servicios_has_venta`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`servicios_has_venta` (
-  `servicios_idservicios` INT NOT NULL,
-  `servicios_venta_idventa` INT NOT NULL,
-  `servicios_venta_cliente_idcliente` INT NOT NULL,
-  `servicios_venta_venta_idventa` INT NOT NULL,
-  `servicios_venta_venta_cliente_idcliente` INT NOT NULL,
-  `venta_idventa` INT NOT NULL,
-  `venta_cliente_idcliente` INT NOT NULL,
-  `venta_venta_idventa` INT NOT NULL,
-  `venta_venta_cliente_idcliente` INT NOT NULL,
-  PRIMARY KEY (`servicios_idservicios`, `servicios_venta_idventa`, `servicios_venta_cliente_idcliente`, `servicios_venta_venta_idventa`, `servicios_venta_venta_cliente_idcliente`, `venta_idventa`, `venta_cliente_idcliente`, `venta_venta_idventa`, `venta_venta_cliente_idcliente`),
-  INDEX `fk_servicios_has_venta_venta1_idx` (`venta_idventa` ASC, `venta_cliente_idcliente` ASC, `venta_venta_idventa` ASC, `venta_venta_cliente_idcliente` ASC) VISIBLE,
-  INDEX `fk_servicios_has_venta_servicios1_idx` (`servicios_idservicios` ASC, `servicios_venta_idventa` ASC, `servicios_venta_cliente_idcliente` ASC, `servicios_venta_venta_idventa` ASC, `servicios_venta_venta_cliente_idcliente` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`venta_has_productos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`venta_has_productos` (
-  `venta_idventa` INT NOT NULL,
-  `venta_cliente_idcliente` INT NOT NULL,
-  `venta_venta_idventa` INT NOT NULL,
-  `venta_venta_cliente_idcliente` INT NOT NULL,
-  `productos_idproductos` INT NOT NULL,
-  `productos_categoria_idcategoria` INT NOT NULL,
-  PRIMARY KEY (`venta_idventa`, `venta_cliente_idcliente`, `venta_venta_idventa`, `venta_venta_cliente_idcliente`, `productos_idproductos`, `productos_categoria_idcategoria`),
-  INDEX `fk_venta_has_productos_productos1_idx` (`productos_idproductos` ASC, `productos_categoria_idcategoria` ASC) VISIBLE,
-  INDEX `fk_venta_has_productos_venta1_idx` (`venta_idventa` ASC, `venta_cliente_idcliente` ASC, `venta_venta_idventa` ASC, `venta_venta_cliente_idcliente` ASC) VISIBLE)
+  PRIMARY KEY (`cliente_idcliente`, `venta_idventa`),
+  INDEX `fk_cliente_has_venta_venta1_idx` (`venta_idventa` ASC) VISIBLE,
+  INDEX `fk_cliente_has_venta_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE,
+  CONSTRAINT `fk_cliente_has_venta_cliente1`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `mascotitas`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cliente_has_venta_venta1`
+    FOREIGN KEY (`venta_idventa`)
+    REFERENCES `mascotitas`.`venta` (`idventa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
