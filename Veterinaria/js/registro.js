@@ -18,8 +18,8 @@ document.getElementById('form')
    // document.getElementById("name").value = "";
     //document.getElementById("name").focus();
   }
-  else if(/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(name.value)===true){
-    alert('Porfavor coloque un nombre sin caracteres especiales ');
+  else if(/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(name.value) === true) {
+    alert('Por favor, coloca un nombre sin caracteres especiales.');
     cleanAndFocus(name);
   }else if(numtel.value.length !=10){
     alert('Porfavor coloque un número de telefono valido');
