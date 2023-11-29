@@ -2,10 +2,7 @@ let txtNombre = document.getElementById("Name");
 let txtNumber = document.getElementById("Number");
 let txtCorreo = document.getElementById("Correo");
 let mensaje = document.getElementById("Mensaje");
-const button = document.getElementById('button');
-
-let btnAgregar = document.getElementById("btnAgregar");
-let btnClear = document.getElementById("btnClear");
+const btn = document.getElementById('button');
 let alertValidaciones = document.getElementById("alertValidaciones");
 
 
@@ -78,7 +75,6 @@ document.getElementById('form')
     txtNombre.style.border = "";
     txtNumber.style.border = "";
     txtCorreo.style.border = "";
-    
     mensaje.style.border = "";
 
     
@@ -113,9 +109,49 @@ document.getElementById('form')
         isValid = false;
     }
 
+    if (isValid){
+        btn.value = 'Enviando mensaje...';
+     const serviceID = 'default_service';
+    const templateID = 'template_n7cj7q6';
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Mensaje enviado gracias por contactarnos!');
+        document.getElementById('form').reset();
+     }, (err) => {
+        btn.value = 'Send Email';
+
+       alert(JSON.stringify(err));
+      });
+    }
+
+    txtNombre.value = "";
+    txtNumber.value = "";
+    txtCorreo.value = "";
+    mensaje.value = "";
+
             
 
-});// btnAgregar click
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// btnAgregar click
 
 // btnClear.addEventListener("click", function (event) {
 //     event.preventDefault();

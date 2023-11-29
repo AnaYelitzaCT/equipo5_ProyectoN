@@ -3,9 +3,9 @@ document.getElementById('form')
   .addEventListener('submit', function (event) {
     event.preventDefault();
 
-let email,password;
-email = document.getElementById("email");
-password = document.getElementById("password");
+
+let email = document.getElementById("email");
+let password = document.getElementById("password");
 
 let user=new Array();
 user=JSON.parse(localStorage.getItem("Usuarios"))?JSON.parse(localStorage.getItem("Usuarios")):[];
