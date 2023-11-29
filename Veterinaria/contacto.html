@@ -19,68 +19,72 @@
   <header id="parteNavbar">
     <script src="./js/navbar.js"></script>
   </header>
-  
 
-  <div class="container " style="padding-top: 10%; ">
-    <main>
-      <div class="py-5 text-center">
-     <img class="d-block mx-auto mb-4 " src="./src/fon_do.png" alt="" width="300" height="200" >
-        <h2>Contáctanos.</h2>
-     </div>
-      <div class="row">
-          
-  
+  <section >
+    <div>
+      <main >
+        <div class="py-5 text-center title">
+          <img class="d-block mx-auto mb-4 " src="./src/fon_do.png" alt="" width="300" height="200">
+          <h2>Contáctanos.</h2>
+        </div>
+        <div class="container">
           <div class="col-md-8 order-md-1">
-           
-            <div class="alert alert-danger fade show" style="display:none;"
-                                               role="alert" id="alertValidaciones">
-                 <p id="alertValidacionesTexto"></p>
-           </div>
+            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+              <p id="alertValidacionesTexto"></p>
+            </div>
             <form class="needs-validation" novalidate id="form">
-              <div class="row" >
-                <div class="mb-6" >
+              <div class="row">
+                <div class="mb-6">
                   <label for="Name">Nombre</label>
-                  <input type="text" class="form-control" id="Name" placeholder="Por favor escriba su nombre" name="name" value="" required>
+                  <input type="text" class="form-control" id="Name" placeholder="Por favor escriba su nombre"
+                    name="name" value="" required>
                   <div class="invalid-feedback">
                     Nombre inválido
                   </div>
                 </div>
-                
+
                 <div class="mb-6">
                   <label for="Number">Teléfono</label>
-                  <input type="text" class="form-control" id="Number" placeholder="Por favor escriba su teléfono" name="phone" value="" required>
+                  <input type="text" class="form-control" id="Number" placeholder="Por favor escriba su teléfono"
+                    name="phone" value="" required>
                   <div class="invalid-feedback">
-                   Teléfono inválida
+                    Teléfono inválida
                   </div>
                 </div>
                 <div class="mb-6">
                   <label for="Correo">Correo</label>
-                  <input type="text" class="form-control" id="Correo" placeholder="Por favor escriba su email" name="email" value="" required>
+                  <input type="text" class="form-control" id="Correo" placeholder="Por favor escriba su email"
+                    name="email" value="" required>
                   <div class="invalid-feedback">
                     Correo inválido
                   </div>
                 </div>
-                  <div class="mb-6">
+                <div class="mb-6">
                   <label for="Mensaje" class="form-label">Mensaje</label>
-                  <textarea placeholder="Por favor escriba su mensaje" name="message" class="form-control " id="Mensaje" rows="6"
-                    cols="60" ></textarea>
-          
+                  <textarea placeholder="Por favor escriba su mensaje" name="message" class="form-control " id="Mensaje"
+                    rows="6" cols="60"></textarea>
+
                 </div>
               </div>
               <!-- <button id="btnAgregar" class="btn btn-primary btn-lg btn-block" type="button">Agregar</button>
               <button id="btnClear" class="btn btn-primary btn-lg btn-block" type="button">Limpiar todo</button> -->
-              <input type="submit" id="button" value="Enviar" class="btn btn-primary btn-lg btn-block" >
+              <input type="submit" id="button" value="Enviar" class="btn btn-primary btn-lg btn-block">
               <hr class="mb-4">
-              
-                
-            </form>
+              <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+              <script src="./js/contacto.js"></script>
           </div>
-        </div>
-      
-        
-      </div>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 
-  <!-- <div class="container">
+          </form>
+        </div>
+      </main>
+    </div>
+
+
+    <!-- <div class="container">
     <form id="form">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Nombre</label>
@@ -108,12 +112,9 @@
       //<button type="submit" class="btnenviar" id="button" style="background-color: #8A7488;">Enviar</button>
       <input type="submit" id="button" value="Enviar" class="btnenviar" style="background-color: #8A7488;">
     </form>-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="./js/contacto.js"></script>
-  </div> 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+
+
+  </section>
 
   <!-- FOOTER -->
 

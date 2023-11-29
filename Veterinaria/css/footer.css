@@ -1,11 +1,10 @@
 .piePagina{
     color: white;
     font-size: 18px;
-    background-color: #b535f6;
-    position:absolute;
-    
-   
-   
+    background-color: #8c758c;
+    position:relaive;
+    margin-bottom: 0;
+  
 }
 
 .piePagina a{

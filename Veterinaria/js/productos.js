@@ -44,5 +44,3 @@ addItem({'id':'9','categoría':'Juguetes','Nombre':'Balón para mascota','Descri
 
 addItem({'id':'10','categoría':'Alimento','Nombre':'Rascador para mascota','Descripción':'Rascador para gato tamaño mediano','Precio':'$130.10',
     'img':'./src/10.png'});
-
-  

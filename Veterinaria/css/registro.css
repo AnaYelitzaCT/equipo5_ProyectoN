@@ -1,12 +1,4 @@
 
-.caja{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 5px;
-    
-}
-
 
 .h1{
     text-align: center;
@@ -23,13 +15,7 @@
 
 }
 
-.container{
-    display: grid;
-    place-items: center;
-    margin: auto;
-}
 
 .title{
     margin-top: 200px;
 }
-
