@@ -1,3 +1,4 @@
+emailjs.init('lWoM7i5rmAA-HDtbS');
 let txtNombre = document.getElementById("Name");
 let txtNumber = document.getElementById("Number");
 let txtCorreo = document.getElementById("Correo");
@@ -46,7 +47,7 @@ function validarNombre(){
    
     let regNombre = /^[a-zA-Z]+$/;
 
-    if (!(regNombre.test(txtNombre.value.trim())) ||txtNombre.value.length < 3 || txtNombre.value.length == null || txtNombre.value.length == "" ) {
+    if (!(regNombre.test(txtNombre.value.trim())) ||txtNombre.value.length > 3 || txtNombre.value.length == null || txtNombre.value.length == "" ) {
         alert("Ingrese solo letras en el campo Nombre");
         return false;
     }
@@ -72,16 +73,9 @@ document.getElementById('form')
     alertValidaciones.innerHTML = "";
     alertValidaciones.style.display = "none";
 
-    txtNombre.style.border = "";
-    txtNumber.style.border = "";
-    txtCorreo.style.border = "";
-    mensaje.style.border = "";
-
-    
-
 
     if (!validarNombre()) {  
-        alertValidaciones.innerHTML = "El campo <strong>Nombre</strong> es requerido </br>"
+        alertValidaciones.innerHTML = "El campo <strong>Nombre</strong> es invalido </br>"
         alertValidaciones.style.display = "block";
         txtNombre.style.border = "solid thin red";
         isValid = false;
@@ -125,12 +119,6 @@ document.getElementById('form')
       });
     }
 
-    txtNombre.value = "";
-    txtNumber.value = "";
-    txtCorreo.value = "";
-    mensaje.value = "";
-
-            
 
 });
 
