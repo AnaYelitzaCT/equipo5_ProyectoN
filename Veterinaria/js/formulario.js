@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const categoria = document.getElementById('validationTooltip04').value;
     const itemPrice = document.getElementById('itemprice').value;
     const itemDesc = document.getElementById('itemdesc').value;
+    const uploadButton = document.getElementById('upload_widget');
 
     // Validaciones básicas
     if (!itemName || !categoria || !itemPrice || !itemDesc) {
@@ -34,12 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
       categoria,
       itemPrice,
       itemDesc
+      
     };
 
     localStorage.setItem('formData', JSON.stringify(formData));
     alert('Sus datos fueron recibidos con éxito! la información será procesada');
 
-    // Puedes limpiar el formulario si deseas
+    // limpiar el formulario si deseas
     form.reset();
   });
 
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(parsedFormData);
   }
 });
+
 
 // clouninary Section
 
