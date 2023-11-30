@@ -96,9 +96,9 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mascotitas`.`servicios` (
   `idservicios` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `telefono` VARCHAR(10) NOT NULL,
-  `precio` DECIMAL NOT NULL,
+  `descripcion` VARCHAR(200) NOT NULL,
+  `precio` DECIMAL(10,0) NOT NULL,
+  `imagen` VARCHAR(200) NOT NULL,
   `venta_idventa` INT NOT NULL,
   `cliente_idcliente` INT NOT NULL,
   PRIMARY KEY (`idservicios`, `venta_idventa`, `cliente_idcliente`),
