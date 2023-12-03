@@ -1,44 +1,14 @@
 
 body{
     background-color: #E1E1E1;
-}
-.caja{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 5px;
-    
-}
-.carousel-dark 
-{
-    margin-top: 100px;
-    background-color: #874F81;
-    background: linear-gradient(purple, 10%, pink);
-}
-.btn-primary
-{
-        border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-    padding: 10px; /*espacio alrededor texto*/
-    background-color:#B69CB3;
-    color: #ffffff; 
-    text-decoration:solid;
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-    border-radius: 80px; /*bordes redondos*/
-    }
-
-.carousel-caption
-{
-    text-align-last: right;
-    text-decoration: #874F81;
-    text-decoration:solid;
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 
-.imgPrincipal{
-    display: flex;
-    justify-content: center;
-}
+
+  
+
 
 .inicioSesion{
     width: 719px;
@@ -60,3 +30,48 @@ body{
     color: #8A7488;
     font-weight: bold;
 }
+.card-container {
+    display: flex;
+    justify-content: center; 
+  flex-wrap: wrap;
+  padding: 0 60px; /* Padding en los lados del contenedor */
+  
+  }
+  .card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    background-color: #8A7488; 
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); 
+  margin-bottom: 20px; /* Espacio entre los renglones de cards */
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease; /* Agrega una transición suave *
+  
+  
+  
+  
+  /* modificar colores del botón */
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #8A7488;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+
+  .card-img-top {
+    width: 50%; 
+    height: 50%; 
+  }
+  .sticker {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #8A7488;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+  }

@@ -8,62 +8,94 @@
     <link rel="stylesheet" href="./css/servicios.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
  
   <body>
+
+  
     <script src="./js/servicios.js"></script> 
     <header id="parteNavbar">
       <script src="./js/navbar.js"></script> 
     </header>
 
    
+    <div style="padding: 120px;"></div>
+ <!-- comienzan card primeras 3 cards-->
 
-    <!-- comienza carrusel imagenes -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="padding-top: 10%;">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="src/paseo.png" width="400px" height="350px">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Paseo de mascotas</h5>
-            
-            <p>Desde $150.00 por hora, depende la distancia, incluye evidencia fotográfica o video</p>
-            <div></div>
-            <div> <a href="" class="btn btn-primary">Agregar servicio</a></div>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="src/baño.png" width="400px" height="350px">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Aseo de mascotas</h5>
-            <p>Desde $250, depende tipo de servicio y tamaño de mascota. Todos incluyen baño garrapaticida y limpieza de oidos</p>
-            <div> <a href="" class="btn btn-primary">Agregar servicio</a></div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="src/dormir.png" width="400px" height="350px">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Hospedaje para mascotas</h5>
-            <p>Desde $200 pesos por día, inlcuye hospedaje, alimentación e hidratación</p>
-            <div> <a href="" class="btn btn-primary">Agregar servicio</a></div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+
+ <div class="card-container">
+  <div class="card">
+    <img src="./src/baño1.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio Aseo para mascota 1</h5>
+      <p class="card-text">Baño básico: Este servicio incluye el 
+        lavado con champú adecuado para el tipo de pelaje de la mascota, enjuague y secado..</p>
+        <p> <span class="sticker">$ 200.00</span>.</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </div>
+
+  <div class="card">
+    <img src="./src/baño2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio Aseo para mascota 2</h5>
+      <p class="card-text">Baño básico además
+         acondicionadores especiales para mejorar la calidad del pelaje, aplicaciones
+         de aceites o lociones para hidratar la piel y el pelaje.</p>
+         <p> <span class="sticker">$ 260.00</span>.</p>
+      <a href="" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./src/baño3.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio Aseo para mascota 3</h5>
+      <p class="card-text">Baño básico además incluyen limpieza y cuidado de 
+        áreas específicas como los oídos y las glándulas anales.</p>
+        <p> <span class="sticker">$ 300.00</span>.</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+</div>
+<!-- siguientes 3 cards-->
+<div style="padding: 60px;"></div>
+
+<div class="card-container">
+  <div class="card">
+    <img src="./src/paseo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio de paseo de mascota 1</h5>
+      <p class="card-text">Paseo por una hora e incluye hidratación y evidencia con fotogrfía y video.</p>
+        <p> <span class="sticker">$ 150.00</span>.</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./src/alimento.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio de paseo de mascota 2</h5>
+      <p class="card-text">Incluye servicio de paseo 1 y ádemas alimentación.</p>
+      <p> <span class="sticker">$ 200.00</span>.</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./src/guarderia.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Servicio de guarderia</h5>
+      <p class="card-text">Estancia de 24 horas con paseo, hidratación y alimentación incluida.</p>
+      <p> <span class="sticker">$ 350.00</span>.</p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+</div>
+
+
  <!-- FOOTER -->
 
  <section class="piePagina">
@@ -75,5 +107,6 @@
   </footer>
 
 </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
