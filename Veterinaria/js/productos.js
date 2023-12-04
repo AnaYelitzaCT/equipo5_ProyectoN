@@ -33,7 +33,7 @@ addItem({'id':'5','categoría':'Alimento','Nombre':'Fancy Feast','Descripción':
 addItem({'id':'6','categoría':'Juguetes','Nombre':'Kit Cat','Descripción':'Alimento para gato en lata, sabor atún','Precio':'$74.50',
     'img':'./src/6.png'});
 
-addItem({'id':'7','categoría':'Juguetes','Nombre':'Ratón de tela','Descripción':'Alimento para gato 13 kg','Precio':'$100.00',
+addItem({'id':'7','categoría':'Juguetes','Nombre':'Ratón de tela','Descripción':'De la mejor calidad','Precio':'$100.00',
     'img':'./src/7.png'});
 
 addItem({'id':'8','categoría':'Juguetes','Nombre':'Juguete para mascota','Descripción':'Juguete pasa mascota de tela suave en colores verde y amarillo','Precio':'$60.20',
