@@ -61,7 +61,7 @@ footer.innerHTML = `
 </div>
 <div class="text-center mb-2">
 <p>
-  Copyrigth Todos los derechos reservados
+  Copyright Todos los derechos reservados
   
 </p>
 
