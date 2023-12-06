@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const categoria = document.getElementById('validationTooltip04').value;
     const itemPrice = document.getElementById('itemprice').value;
     const itemDesc = document.getElementById('itemdesc').value;
+    const uploadButton = document.getElementById('upload_widget');
+    const fileInput = document.getElementById('fileInput');
 
     // Validaciones básicas
     if (!itemName || !categoria || !itemPrice || !itemDesc) {
