@@ -43,7 +43,7 @@ document.getElementById('form')
           "Email": email.value, "Contraseña": contraseña1.value
         })
         localStorage.setItem("Usuarios", JSON.stringify(records));
-        alert("usuario registraso");
+        alert("Usuario registrado");
         btn.value = 'Registrarse';
         window.location.href="logIn.html";
       }

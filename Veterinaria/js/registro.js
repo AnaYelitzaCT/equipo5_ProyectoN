@@ -34,9 +34,9 @@ document.getElementById('form')
     
     let json = JSON.stringify({"Nombre": name.value,"Telefono": phone.value,
     "Email": email.value, "Contraseña": contraseña1.value});
-    localStorage.setItem("Usarios", json); 
+    localStorage.setItem("Usuario", json); 
     //  obtención de localStorage
-    let localStorageGet = localStorage.getItem("Usarios");
+    let localStorageGet = localStorage.getItem("Usuario");
     console.log(localStorageGet);
        alert('Usuario registrado!');
        document.getElementById('form').reset();
