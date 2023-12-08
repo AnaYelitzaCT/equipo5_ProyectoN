@@ -15,7 +15,7 @@ function addItem(item){
 }
 
 
-addItem({'id':'1','categoría':'Alimento','Nombre':'Royal Canin','Descripción':'Alimento para gato','Precio':'$235.00',
+addItem({'id':'1','categoría':'Alimento','Nombre':'Royal Canin','Descripción':'Alimento para gato 6.3 kg','Precio':'$1500.00',
     'img':'./src/royal.png'});
 
 addItem({'id':'2','categoría':'Alimento','Nombre':'NUCAT','Descripción':'Alimento para gato 15 kg','Precio':'$665.00',
@@ -31,7 +31,7 @@ addItem({'id':'5','categoría':'Alimento','Nombre':'Fancy Feast','Descripción':
     'img':'./src/5.png'});
 
 addItem({'id':'6','categoría':'Juguetes','Nombre':'Kit Cat','Descripción':'Alimento para gato en lata, sabor atún','Precio':'$74.50',
-    'img':'./src/6.png'});
+    'img':'./src/kitcat.png'});
 
 addItem({'id':'7','categoría':'Juguetes','Nombre':'Ratón de tela','Descripción':'De la mejor calidad','Precio':'$100.00',
     'img':'./src/7.png'});
