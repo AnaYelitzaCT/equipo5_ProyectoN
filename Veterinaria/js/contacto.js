@@ -7,6 +7,7 @@ const btn = document.getElementById('button');
 let alertValidaciones = document.getElementById("alertValidaciones");
 
 
+
 function validarCantidad() {
     if (txtNumber.value.length == 0) {
         alert("Teléfono inválido");
@@ -43,16 +44,14 @@ function validarCorreo(){
 }
 
 function validarNombre(){
+    let regNombre = /^[A-Za-z]+$/;
    
-   
-    let regNombre = /^[a-zA-Z]+$/;
-
-    if (!(regNombre.test(txtNombre.value.trim())) ||txtNombre.value.length > 3 || txtNombre.value.length == null || txtNombre.value.length == "" ) {
+    if (!regNombre.test(txtNombre.value.trim())) {
         alert("Ingrese solo letras en el campo Nombre");
         return false;
     }
-    return true;
 
+    return true;
 }
 
 

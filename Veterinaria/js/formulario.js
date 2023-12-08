@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const categoria = document.getElementById('validationTooltip04').value;
     const itemPrice = document.getElementById('itemprice').value;
     const itemDesc = document.getElementById('itemdesc').value;
-    const uploadButton = document.getElementById('upload_widget');
-    const fileInput = document.getElementById('fileInput');
+    // const uploadButton = document.getElementById('upload_widget');
+    // const fileInput = document.getElementById('fileInput');
 
     // Validaciones básicas
     if (!itemName || !categoria || !itemPrice || !itemDesc) {
@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('formData', JSON.stringify(formData));
     alert('Sus datos fueron recibidos con éxito! la información será procesada');
 
-    // Puedes limpiar el formulario si deseas
+    
     form.reset();
   });
 
-  // Recuperar datos del localStorage si existen al cargar la página
+  // datos del localStorage 
   const savedFormData = localStorage.getItem('formData');
   if (savedFormData) {
     const parsedFormData = JSON.parse(savedFormData);
-    // Puedes utilizar los datos recuperados para lo que necesites en tu aplicación
+    // datos recuperados 
     console.log(parsedFormData);
   }
 });

@@ -11,6 +11,12 @@
   font-size: 35px;
 
 }
+#preview {
+  width: 50%; /* Ajusta el ancho a lo que necesites */
+  height: 50%; /* Altura automática para mantener la proporción original */
+  image-rendering:optimizeQuality; /* Mejora la nitidez de la imagen */
+}
+
 .container {
   display: flex;
   flex-direction: row;

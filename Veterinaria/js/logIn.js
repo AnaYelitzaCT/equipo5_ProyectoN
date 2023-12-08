@@ -12,7 +12,7 @@ user=JSON.parse(localStorage.getItem("Usuarios"))?JSON.parse(localStorage.getIte
 console.log(user);
 if(user.some((v)=>{return v.Email==email.value && v.Contraseña==password.value}))
 {
-  alert("Login Pass");
+  alert("Usuario y contraseña correcta");
   
 //  localStorage.setItem('name',current_user.name);
 //  localStorage.setItem('email',current_user.email);
